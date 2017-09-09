@@ -1,0 +1,115 @@
+*{  margin: 0;
+    padding : 0;
+}
+body {
+    background-image: url(../images/got-face.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #1A2227;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500 ;
+    font-size : 16 px;
+    line-height : 20px;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    box-sizing: border-box;
+/*    overflow: hidden;*/
+}
+.sign-in{
+    color: white;
+/*    font-family: monospace;*/
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #00719C;
+    cursor: pointer;
+    line-height: 50px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.9);
+    border-radius: 6px;
+}
+.fold{
+    position: relative;
+    width: 100%;
+    background-color: rgba(17,24,34,.75);
+    transform-origin: top;
+    padding: 35px 30px;
+    box-sizing: border-box;
+    transition: .5s;
+    transform: perspective(2000px) rotateX(90deg);
+/*    transform: perspective(1000px);*/
+}
+.fold.active{
+     transform: perspective(2000px) rotateX(0deg);
+}
+.fold input[type="text"],
+.fold input[type="password"]{
+    width: 100%;
+    height: 47px;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: none;
+    border-radius: 40px;
+    color: azure;
+    background-color: transparent;
+    border: 2.5px solid grey;
+    margin-bottom: 23px;
+    font-size: 19px;
+}
+::placeholder{
+    color: darkgrey;
+    font-family: monospace;
+    font-size: 18px;
+/*    font-weight: bold;*/
+}
+
+.fold input[type="text"]:focus,
+.fold input[type="password"]:focus{
+    border: 2.5px solid #247EBF;
+    transition: .7s;
+}
+
+.fold input[type="button"]{
+    margin-bottom: 30px;
+    font-family: monospace;
+    margin-top: 20px;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #213F4A;
+    border: none;
+    color: aliceblue;
+}
+.fold input[type="button"]:hover{
+    background-color: #00719C;
+    color: white;
+    font-size: 26px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.container a{
+    margin-left: 90px;
+    
+    color: #808080;
+    font-size: 16.5px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(17,24,34,.5);
+}
+.container a:hover{
+    color: #ADBBBE;
+}
